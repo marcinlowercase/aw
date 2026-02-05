@@ -1,0 +1,87 @@
+/* index.css */
+
+@font-face {
+    font-family: "vga";
+    src: url("../data/font/perfect_dos_vga_437.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "courier_code";
+    src: url("../data/font/courier_code.ttf") format("truetype");
+}
+
+:root {
+    --device-corner-radius: 20px;
+    --padding: 8px;
+    --single-line-height: 100px;
+
+    --sans-font: "Google Sans Flex", sans-serif;
+    --serif-font: "Noto Serif", serif;
+    --mono-font: "courier_code", monospace;
+    --vga-font: "vga", monospace;
+
+    --font-size--xl: 2em;
+    --font-size--l: 1.5em;
+    --font-size--m: 1.25em;
+    --font-size--s: 1em;
+    --font-size--xs: 0.75em;
+
+    --line-size--thick: 12px;
+    --line-size--regular: 8px;
+    --line-size--thin: 4px;
+
+    --border-radius--regular: 24px;
+}
+
+body {
+    background-color: white;
+    font-family: var(--vga-font);
+    font-size: 1em;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    transition: background-color 0.5s;
+    width: 100%;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by most modern browsers */
+}
+
+.layer-2 {
+    --layer-2-radius: max(0px, calc(var(--layer-1-radius) - var(--padding)));
+
+    --layer-2-min-height: calc(
+        var(--layer-1-min-height) - (var(--padding) * 2)
+    );
+
+    border-radius: var(--layer-2-radius);
+    min-height: max(calc(var(--layer-2-radius) * 2), var(--layer-2-min-height));
+    /*padding: var(--padding);*/
+}
+.layer-1 {
+    --layer-1-radius: max(
+        0px,
+        calc(var(--device-corner-radius) - var(--padding))
+    );
+    --layer-1-min-height: calc(
+        var(--single-line-height) - (var(--padding) * 2)
+    );
+
+    border-radius: var(--layer-1-radius);
+    min-height: max(calc(var(--layer-1-radius) * 2), var(--layer-1-min-height));
+    /*padding: var(--padding);*/
+}
+
+@media (max-width: 768px) {
+    div {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        cursor: pointer;
+    }
+}

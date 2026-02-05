@@ -1,0 +1,28 @@
+/* branding.css */
+#browser > img {
+    max-height: 80vh;
+    max-width: 80vw;
+}
+#browser {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+    /*padding: var(--padding);*/
+    height: calc(100%);
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: calc(100%);
+}
+
+/* portrait */
+@media (max-aspect-ratio: 1/1) {
+}
+
+/* landscape */
+@media (min-aspect-ratio: 1/1) {
+}
