@@ -31,6 +31,10 @@ const handle_request = async (request) => {
         file_path = join(Deno.cwd(), ui_directory, "index.html");
         return await index_response(file_path, request);
 
+      case "/privacy-policy":
+        file_path = join(Deno.cwd(), ui_directory, "privacy_policy.html");
+        return await index_response(file_path, request);
+
       default:
         return serveDir(request, {
           fsRoot: ui_directory,
