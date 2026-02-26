@@ -1,0 +1,32 @@
+/*oo1.css*/
+
+:root {
+    --device-corner-radius: 20px;
+    --padding: 8px;
+    --single-line-height: 100px;
+}
+.layer-1 {
+    --layer-1-radius: max(
+        0px,
+        calc(var(--device-corner-radius) - var(--padding))
+    );
+    --layer-1-min-height: calc(var(--single-line-height) - var(--padding) * 2);
+
+    border-radius: var(--layer-1-radius);
+    min-height: max(calc(var(--layer-1-radius) * 2), var(--layer-1-min-height));
+    margin: var(--padding);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.layer-2 {
+    --layer-2-radius: max(0px, calc(var(--layer-1-radius) - var(--padding)));
+
+    --layer-2-min-height: calc(var(--layer-1-min-height) - var(--padding) * 2);
+
+    border-radius: var(--layer-2-radius);
+    min-height: max(calc(var(--layer-2-radius) * 2), var(--layer-2-min-height));
+    /*padding: var(--padding);*/
+}

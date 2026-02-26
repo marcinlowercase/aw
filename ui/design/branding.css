@@ -1,24 +1,30 @@
 /* branding.css */
-#browser > img {
-    max-height: 80vh;
-    max-width: 80vw;
+#logo {
+    max-height: 90vh;
+    max-width: 90vw;
 }
-#browser {
-    align-items: center;
-    background-color: white;
+#branding {
     display: flex;
     flex-direction: column;
-    gap: var(--padding);
-    /*padding: var(--padding);*/
-    height: calc(100%);
     justify-content: center;
+    align-items: center;
+
+    left: 50%;
     position: absolute;
-    text-align: center;
     top: 50%;
-    transform: translate(0%, -50%);
-    width: calc(100%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+#nav {
+    position: absolute;
+    bottom: 0;
+    padding: var(--device-corner-radius);
 }
 
+#nav > * {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
 /* portrait */
 @media (max-aspect-ratio: 1/1) {
 }

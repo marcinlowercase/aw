@@ -53,31 +53,6 @@ body {
     user-select: none; /* Non-prefixed version, currently supported by most modern browsers */
 }
 
-.layer-2 {
-    --layer-2-radius: max(0px, calc(var(--layer-1-radius) - var(--padding)));
-
-    --layer-2-min-height: calc(
-        var(--layer-1-min-height) - (var(--padding) * 2)
-    );
-
-    border-radius: var(--layer-2-radius);
-    min-height: max(calc(var(--layer-2-radius) * 2), var(--layer-2-min-height));
-    /*padding: var(--padding);*/
-}
-.layer-1 {
-    --layer-1-radius: max(
-        0px,
-        calc(var(--device-corner-radius) - var(--padding))
-    );
-    --layer-1-min-height: calc(
-        var(--single-line-height) - (var(--padding) * 2)
-    );
-
-    border-radius: var(--layer-1-radius);
-    min-height: max(calc(var(--layer-1-radius) * 2), var(--layer-1-min-height));
-    /*padding: var(--padding);*/
-}
-
 @media (max-width: 768px) {
     div {
         -webkit-tap-highlight-color: transparent;

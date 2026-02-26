@@ -100,3 +100,21 @@
 // };
 
 // // event listener
+// Get all computed styles for the root (<html>) element
+const rootStyles = getComputedStyle(document.documentElement);
+
+// Retrieve the specific CSS variables (using .trim() to remove any accidental spaces)
+const cornerRadius = rootStyles
+  .getPropertyValue("--device-corner-radius")
+  .trim();
+const padding = rootStyles.getPropertyValue("--padding").trim();
+const singleLineHeight = rootStyles
+  .getPropertyValue("--single-line-height")
+  .trim();
+
+// Log them to the console
+console.log("Device Corner Radius:", cornerRadius);
+console.log("Padding:", padding);
+console.log("Single Line Height:", singleLineHeight);
+
+console.log("thaitran");
