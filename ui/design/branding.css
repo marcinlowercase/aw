@@ -3,6 +3,10 @@
     max-height: 90vh;
     max-width: 90vw;
 }
+#studio {
+    text-decoration: none;
+    color: black;
+}
 #branding {
     display: flex;
     flex-direction: column;
@@ -27,6 +31,9 @@
 }
 /* portrait */
 @media (max-aspect-ratio: 1/1) {
+    body {
+        font-size: 1.5em;
+    }
 }
 
 /* landscape */
