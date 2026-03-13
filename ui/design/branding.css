@@ -1,12 +1,27 @@
 /* branding.css */
+#become-a-tester {
+    margin-top: var(--device-corner-radius);
+}
+#device-outline {
+    position: fixed; /* Locks it to the viewport */
+    inset: var(
+        --padding
+    ); /* Applies top, right, bottom, left at exactly --padding */
+
+    border: 1px solid var(--highlight-color); /* The 1px outline */
+
+    /* The magic math for concentric nested corners */
+    border-radius: max(0px, calc(var(--device-corner-radius) - var(--padding)));
+
+    pointer-events: none; /* Prevents the outline from blocking clicks to the nav/links */
+    z-index: 9999; /* Keeps it on top of everything */
+}
+
 #logo {
     max-height: 90vh;
     max-width: 90vw;
 }
-#studio {
-    text-decoration: none;
-    color: black;
-}
+
 #branding {
     display: flex;
     flex-direction: column;

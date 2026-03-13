@@ -1,93 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./design/index.css" />
         <link rel="stylesheet" href="./design/privacy_policy.css" />
-    <link
-        rel="icon"
-        href="./data/img/browser_icon.svg"
-        type="image/x-icon"
-    />
-    <title>privacy policy</title
+        <link
+            rel="icon"
+            href="./data/img/logo_square.svg"
+            type="image/x-icon"
+        />
+        <title>Privacy Policy — oo1 studio</title>
+    </head>
+    <body>
+        <h1>Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> February 25, 2026</p>
 
+        <p>
+            <a href="https://oo1.studio/"><strong>oo1 studio</strong></a> built
+            <a href="/" target="_blank" rel="noopener noreferrer"
+                ><strong>the browser of oo1 studio</strong></a
+            >
+            app as a Free app. This service is provided by oo1 studio at no cost
+            and is intended for use "as is". We are committed to protecting your
+            privacy. This policy explains how our fullscreen browser operates
+            without collecting your personal data.
+        </p>
 
-</head>
-<body>
+        <h2>1. Zero Data Collection</h2>
+        <p>
+            We believe your browsing activity is your own business.
+            <strong
+                >We do not collect, store, transmit, or monetize any personal
+                data.</strong
+            >
+        </p>
+        <ul>
+            <li>
+                <strong>No Browsing Data:</strong> We do not monitor or upload
+                your browsing history, bookmarks, or search queries.
+            </li>
+            <li>
+                <strong>No Analytics or Tracking:</strong> The App does not
+                contain third-party tracking SDKs (such as Google Analytics or
+                Firebase) to monitor your behavior.
+            </li>
+            <li>
+                <strong>No Accounts:</strong> The App does not require you to
+                create an account, and we do not collect personal identifiers
+                like names or email addresses.
+            </li>
+            <li>
+                <strong>No Retention:</strong> Since we do not collect data, we
+                have no personal information to retain or store on our servers.
+            </li>
+        </ul>
 
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> February 25, 2026</p>
+        <h2>2. OutSync Hardware-Aware API</h2>
+        <p>
+            The browser utilizes the <strong>OutSync</strong> protocol to bridge
+            the gap between your device and the web. OutSync shares physical
+            design metrics&mdash;such as corner radius, safe-area padding, and
+            system highlight colors&mdash;directly with the websites you visit.
+            This allows web content to flow edge-to-edge and feel like a native
+            part of your phone.
+        </p>
+        <ul>
+            <li>
+                <strong>What is shared:</strong> Physical screen metrics such as
+                <em
+                    >corner radius, safe area padding, notch cutouts, and
+                    component dimensions</em
+                >.
+            </li>
+            <li>
+                <strong>Privacy status:</strong> These are generic hardware
+                measurements. They are <strong>not</strong> personal data, they
+                cannot be used to identify you personally, and they are never
+                sent to our servers. This data is passed strictly locally to the
+                rendering engine to optimize web UI layout.
+            </li>
+        </ul>
 
-    <p>
-        <strong>oo1 studio</strong> built the <strong>the browser of oo1 studio</strong> app as a Free app.
-        This service is provided by oo1 studio at no cost and is intended for use "as is".
-        We are committed to protecting your privacy. This policy explains how our fullscreen browser operates without collecting your personal data.
-    </p>
+        <h2>3. GeckoView Engine & Local Storage</h2>
+        <p>
+            The App is built using the
+            <span class="highlight">GeckoView</span> rendering engine. Because
+            of this, all standard browsing data (such as cookies, cache, site
+            preferences, and local storage) is handled directly by the engine
+            and is stored <strong>locally on your device</strong>.
+        </p>
+        <p>
+            You have full control over this data. You can clear your browsing
+            history and local storage at any time using the App's built-in
+            settings. We have no access to this local data.
+        </p>
 
-    <h2>1. Zero Data Collection</h2>
-    <p>We believe your browsing activity is your own business. <strong>We do not collect, store, transmit, or monetize any personal data.</strong></p>
-    <ul>
-        <li><strong>No Browsing Data:</strong> We do not monitor or upload your browsing history, bookmarks, or search queries.</li>
-        <li><strong>No Analytics or Tracking:</strong> The App does not contain third-party tracking SDKs (such as Google Analytics or Firebase) to monitor your behavior.</li>
-        <li><strong>No Accounts:</strong> The App does not require you to create an account, and we do not collect personal identifiers like names or email addresses.</li>
-    </ul>
+        <h2>4. Device Permissions</h2>
+        <p>
+            The App itself does not use your Camera, Microphone, or Location in
+            the background. However, as a web browser, websites you visit may
+            request these permissions.
+        </p>
+        <p>
+            These permissions are handled on a per-session basis, and the App
+            will only grant a website access to these sensors if you explicitly
+            approve the request in the Android system prompt.
+        </p>
 
-    <h2>2. Hardware-Aware Design API & Device Metrics</h2>
-    <p>
-        The core feature of this browser is its edge-to-edge, fullscreen design. To allow websites to adapt perfectly to your specific device, the App reads physical hardware metrics and passes them to the web pages you visit.
-    </p>
-    <ul>
-        <li><strong>What is shared:</strong> Physical screen metrics such as <em>corner radius, safe area padding, notch cutouts, and component dimensions</em>.</li>
-        <li><strong>Privacy status:</strong> These are generic hardware measurements. They are <strong>not</strong> personal data, they cannot be used to identify you personally, and they are never sent to our servers. This data is passed strictly locally to the rendering engine to optimize web UI layout.</li>
-    </ul>
+        <h2>5. Third-Party Websites</h2>
+        <p>
+            As a web browser, the App provides unfiltered access to the
+            internet. We are not responsible for the content, privacy practices,
+            or data collection policies of the third-party websites you choose
+            to visit. We strongly recommend reviewing the privacy policies of
+            any website you interact with.
+        </p>
 
-    <h2>3. GeckoView Engine & Local Storage</h2>
-    <p>
-        The App is built using the <span class="highlight">GeckoView</span> rendering engine.
-        Because of this, all standard browsing data (such as cookies, cache, site preferences, and local storage) is handled directly by the engine and is stored <strong>locally on your device</strong>.
-    </p>
-    <p>
-        You have full control over this data. You can clear your browsing history and local storage at any time using the App's built-in settings. We have no access to this local data.
-    </p>
+        <h2>6. Children's Privacy</h2>
+        <p>
+            Our service does not address anyone under the age of 13. We do not
+            knowingly collect personally identifiable information from children.
+            If you are a parent or guardian and you are aware that your child
+            has provided us with personal data, please contact us.
+        </p>
 
-    <h2>4. Device Permissions</h2>
-    <p>
-        The App itself does not use your Camera, Microphone, or Location in the background. However, as a web browser, websites you visit may request these permissions (for example, a mapping website asking for your location or a video call website asking for camera access).
-    </p>
-    <p>
-        These permissions are handled on a per-session basis, and the App will only grant a website access to these sensors if you explicitly approve the request in the Android system prompt.
-    </p>
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>
+            We may update our Privacy Policy from time to time. We will notify
+            you of any changes by posting the new Privacy Policy on this page.
+            These changes are effective immediately after they are posted.
+        </p>
 
-    <h2>5. Third-Party Websites</h2>
-    <p>
-        As a web browser, the App provides unfiltered access to the internet. We are not responsible for the content, privacy practices, or data collection policies of the third-party websites you choose to visit. We strongly recommend reviewing the privacy policies of any website you interact with.
-    </p>
+        <h2>8. Contact Us</h2>
+        <p>
+            If you have any questions, concerns, or suggestions about our
+            Privacy Policy, do not hesitate to contact us at:
+            <br /><br />
+            <strong>Email:</strong>
+            <a href="mailto:marcinlowercase@gmail.com"
+                >marcinlowercase@gmail.com</a
+            >
+        </p>
 
-    <h2>6. Changes to This Privacy Policy</h2>
-    <p>
-        We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
-    </p>
+        <div class="footer">
+            &copy; <span id="currentYear"></span> oo1 studio. All rights
+            reserved.
+        </div>
 
-    <h2>7. Contact Us</h2>
-    <p>
-        If you have any questions, concerns, or suggestions about our Privacy Policy, do not hesitate to contact us at:
-        <br><br>
-        <strong>Email:</strong> <a href="mailto:marcinlowercase@gmail.com">marcinlowercase@gmail.com</a>
-    </p>
-
-    <div class="footer">
-        &copy; <span id="currentYear"></span> oo1 studio. All rights reserved.
-    </div>
-
-    <!-- Script to auto-update the copyright year -->
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-
-</body>
+        <script>
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
 </html>

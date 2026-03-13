@@ -14,10 +14,11 @@
     --device-corner-radius: 20px;
     --padding: 8px;
     --single-line-height: 100px;
+    --highlight-color: blue;
 
     --sans-font: "Google Sans Flex", sans-serif;
-    --serif-font: "Noto Serif", serif;
-    --mono-font: "courier_code", monospace;
+    --serif-font: "IBM Plex Serif", serif;
+    --mono-font: "JetBrains Mono", monospace;
     --vga-font: "vga", monospace;
 
     --font-size--xl: 2em;
@@ -32,11 +33,16 @@
 
     --border-radius--regular: 24px;
 }
-
+a {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    color: var(--highlight-color);
+}
 body {
     background-color: white;
-    font-family: var(--vga-font);
+    font-family: var(--sans-font);
     font-size: 1em;
+    font-weight: 100;
     margin: 0;
     height: 100%;
     padding: 0;

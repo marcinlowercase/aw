@@ -1,49 +1,30 @@
-//server.js
-import { join } from "https://deno.land/std@0.211.0/path/mod.ts";
+// server.js
 import { serveDir } from "https://deno.land/std@0.211.0/http/file_server.ts";
-import { contentType } from "https://deno.land/std@0.211.0/media_types/mod.ts";
 
 const ui_directory = "ui";
 
-const index_response = async (file_path, request) => {
-  let file_content = await Deno.readTextFile(file_path);
-  const file_extension = file_path.split(".").pop();
-
-  const response_headers = new Headers({
-    "content-type": contentType(`.${file_extension}`) ||
-      "application/octet-stream",
-  });
-
-  return new Response(file_content, {
-    status: 200,
-    headers: response_headers,
-  });
-};
-
-const handle_request = async (request) => {
+Deno.serve(async (request) => {
   const url = new URL(request.url);
-  const path_name = url.pathname;
 
-  try {
-    let file_path = "";
-    switch (path_name) {
-      case "/":
-        file_path = join(Deno.cwd(), ui_directory, "index.html");
-        return await index_response(file_path, request);
-
-      case "/privacy-policy":
-        file_path = join(Deno.cwd(), ui_directory, "privacy_policy.html");
-        return await index_response(file_path, request);
-
-      default:
-        return serveDir(request, {
-          fsRoot: ui_directory,
-        });
-    }
-  } catch (error) {
-    console.warn(`File not found: ${path_name}`);
-    return new Response("Not Found", { status: 404 });
+  // 1. Redirect testers to your Google Group for Closed Testing
+  if (url.pathname === "/download" || url.pathname === "/join") {
+    // Replace this with your actual Google Group URL
+    const googleGroupUrl = "https://groups.google.com/g/YOUR_GROUP_NAME";
+    return Response.redirect(googleGroupUrl, 302);
   }
-};
 
-Deno.serve(handle_request);
+  // 2. Handle Clean URLs (e.g. /privacy-policy -> privacy_policy.html)
+  if (url.pathname === "/privacy-policy") {
+    // Rewrite the URL internally so serveDir finds the correct HTML file
+    // Note: using url.href ensures the Request object is cloned perfectly
+    url.pathname = "/privacy_policy.html";
+    return serveDir(new Request(url.href, request), { fsRoot: ui_directory });
+  }
+
+  // 3. Serve EVERYTHING else (index.html, CSS, JS, fonts, SVG)
+  // Automatically handles Content-Types, caching, and 404s
+  return serveDir(request, {
+    fsRoot: ui_directory,
+    showIndex: true,
+  });
+});
