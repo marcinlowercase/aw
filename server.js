@@ -13,15 +13,19 @@ Deno.serve(async (request) => {
     return Response.redirect(googleGroupUrl, 302);
   }
 
-  // 2. Handle Clean URLs (e.g. /privacy-policy -> privacy_policy.html)
+  // 2. Handle Clean URLs (e.g., /privacy-policy -> privacy_policy.html)
   if (url.pathname === "/privacy-policy") {
-    // Rewrite the URL internally so serveDir finds the correct HTML file
-    // Note: using url.href ensures the Request object is cloned perfectly
     url.pathname = "/privacy_policy.html";
     return serveDir(new Request(url.href, request), { fsRoot: ui_directory });
   }
 
-  // 3. Serve EVERYTHING else (index.html, CSS, JS, fonts, SVG)
+  // 3. Handle Clean URL for Account Deletion (e.g., /delete-account -> delete_account.html)
+  if (url.pathname === "/delete-account") {
+    url.pathname = "/delete_account.html";
+    return serveDir(new Request(url.href, request), { fsRoot: ui_directory });
+  }
+
+  // 4. Serve EVERYTHING else (index.html, CSS, JS, fonts, SVG)
   // Automatically handles Content-Types, caching, and 404s
   return serveDir(request, {
     fsRoot: ui_directory,

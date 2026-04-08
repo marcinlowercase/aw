@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./design/index.css" />
+        <link rel="stylesheet" href="./design/privacy_policy.css" />
+        <link
+            rel="icon"
+            href="./data/img/logo_square.svg"
+            type="image/x-icon"
+        />
+        <title>Account Deletion — oo1 studio</title>
+    </head>
+    <body>
+        <h1>Account Deletion Request</h1>
+        <p>
+            This page provides instructions on how to request the deletion of
+            your account and associated data for
+            <a href="/" target="_blank" rel="noopener noreferrer"
+                ><strong>the browser of oo1 studio</strong></a
+            >.
+        </p>
+
+        <h2>1. How to delete your account and data</h2>
+        <p>
+            If you no longer have the app installed and wish to permanently
+            delete your cloud sync account, please follow these steps:
+        </p>
+        <ul>
+            <li>
+                Send an email to
+                <a href="mailto:marcinlowercase@gmail.com"
+                    ><strong>marcinlowercase@gmail.com</strong></a
+                >.
+            </li>
+            <li>
+                You <strong>must</strong> send the email from the exact email
+                address you used to log into the browser's sync service.
+            </li>
+            <li>
+                Use the subject line:
+                <strong>"Account Deletion Request"</strong>.
+            </li>
+        </ul>
+
+        <h2>2. What data gets deleted?</h2>
+        <p>
+            Once we receive and verify your request, we will permanently delete
+            the following data from our cloud servers:
+        </p>
+        <ul>
+            <li>Your email address used for authentication.</li>
+            <li>All synced browsing history.</li>
+            <li>
+                All synced app settings (such as UI configurations and
+                hardware-aware metrics).
+            </li>
+        </ul>
+
+        <h2>3. Data Retention and Local Data</h2>
+        <p>
+            Please note that this deletion process is permanent and cannot be
+            undone. Data stored locally on your physical device is not
+            controlled by our servers and will not be affected by this request.
+            To remove local data, you must clear the app's local storage in the
+            settings or uninstall the app directly from your Android device.
+        </p>
+
+        <div class="footer">
+            &copy; <span id="currentYear"></span> oo1 studio. All rights
+            reserved.
+        </div>
+
+        <script>
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>
