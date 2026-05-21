@@ -1,7 +1,5 @@
 /* branding.css */
-#become-a-tester {
-    margin-top: var(--device-corner-radius);
-}
+
 #device-outline {
     position: fixed; /* Locks it to the viewport */
     inset: var(
